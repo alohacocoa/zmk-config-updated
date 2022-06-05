@@ -15,8 +15,6 @@
 #define MEDIAFN 4
 #define LANG 5
 
-sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-
 
 / {
 	keymap {
@@ -24,19 +22,19 @@ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 		aset_layer {
 
-			bindings = <	
+			bindings = <
 	&kp TAB   &kp Q &kp W &kp J &kp F &kp G                                                                    &kp Y &kp P  &kp U     &kp L   &kp SEMI    &kp LEFT_BRACKET
 	&sk LSHFT   &lt LANG A &kp S &lt MEDIAFN E &kp T &kp D                                                          &kp H &kp N  &kp I     &kp O   &kp R &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B &none &kp PSCRN                             &kp CAPS &none &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &kp NON_US_BSLH
 	                 &kp LGUI &kp LALT &mt LCTRL ENTER &lt NAVNUM SPACE &lt APPS ESC        &lt SYM LS(N2) &lt NAVNUM BSPC &mt LCTRL MINUS &bt BT_SEL 0 &bt BT_SEL 1
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 	};
-	
-	
-	
+
+
+
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -45,15 +43,15 @@ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			bindings = <
 			&kp LC(Z) &kp LC(V) &kp HOME &kp UP &kp END &kp LC(TAB) 				&kp GRAVE &kp N7 &kp N8 &kp N9 &kp EQUAL &kp LG(DOT)
 			&mt LGUI K_APP &kp DEL &kp LEFT &kp BSPC &kp RIGHT &kp LC(LS(TAB)) 				&kp N0 &mt LCTRL N4 &mt LSHFT N5 &mt LALT N6  &kp LS(MINUS) &kp LS(RBKT)
-			&kp LC(A) &mt LALT F2 &kp ENTER &kp DOWN &kp TAB &kp LC(V) &none &none 		&none &none &kp SPACE &kp N1 &kp N2 &kp N3 &kp DOT &kp FSLH  
-				&bootloader &reset &kp LC(C) &mt LSHFT N0 &mt LCTRL ESC			&mt RALT ESC &mt LSHFT N0 &kp LA(SPACE) &bootloader &reset 
-			
+			&kp LC(A) &mt LALT F2 &kp ENTER &kp DOWN &kp TAB &kp LC(V) &none &none 		&none &none &kp SPACE &kp N1 &kp N2 &kp N3 &kp DOT &kp FSLH
+				&bootloader &reset &kp LC(C) &mt LSHFT N0 &mt LCTRL ESC			&mt RALT ESC &mt LSHFT N0 &kp LA(SPACE) &bootloader &reset
+
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 	};
-	
+
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -61,64 +59,64 @@ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		apps_layer {
 
 			bindings = <
-			&none &kp LG(TAB) &kp DEL &kp LEFT &kp RIGHT &kp LC(W) 				&none &none &none &none &none &none 
+			&none &kp LG(TAB) &kp DEL &kp LEFT &kp RIGHT &kp LC(W) 				&none &none &none &none &none &none
 			&kp LA(F4) &kp LC(W) &kp ENTER &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(LG(RIGHT)) 				&none &none &none &none &none &none
-			&none &kp LALT &kp DEL &kp LS(TAB) &kp TAB  &kp LC(LG(LEFT)) &none &none 		&none &none &none &none &none &none &none &none 
-				    &none &none &none &none &none &none &none &none &none &none 
+			&none &kp LALT &kp DEL &kp LS(TAB) &kp TAB  &kp LC(LG(LEFT)) &none &none 		&none &none &none &none &none &none &none &none
+				    &none &none &none &none &none &none &none &none &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 	};
-	
-	
+
+
 	keymap {
 		compatible = "zmk,keymap";
 
 		sym_layer {
 
 			bindings = <
-			&none &none &none &none &none &none 				&none &kp NON_US_HASH &kp RA(LBKT) &kp RA(RBKT) &kp RA(NON_US_HASH) &none 
+			&none &none &none &none &none &none 				&none &kp NON_US_HASH &kp RA(LBKT) &kp RA(RBKT) &kp RA(NON_US_HASH) &none
 			&kp LS(EQUAL) &kp RA(EQUAL) &kp LEFT &kp EQUAL &kp RIGHT &kp LS(N1) 				&kp LC(TAB) &kp RA(SQT) &kp LS(N8) &kp LS(N9) &kp LS(MINUS) &kp LS(RBKT)
-			&none &kp RA(N7) &kp LS(N2) &kp RA(N3) &kp LS(N5) &none &none &none 		&none &none &kp LC(LS(TAB)) &kp NON_US_BSLH &kp LS(N7) &kp LS(NON_US_BSLH) &none &none 
-				    &none &none &kp RA(N2) &kp SPACE &kp LALT	        	&none &none &none &none &none 
+			&none &kp RA(N7) &kp LS(N2) &kp RA(N3) &kp LS(N5) &none &none &none 		&none &none &kp LC(LS(TAB)) &kp NON_US_BSLH &kp LS(N7) &kp LS(NON_US_BSLH) &none &none
+				    &none &none &kp RA(N2) &kp SPACE &kp LALT	        	&none &none &none &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 	};
-	
+
 	keymap {
 		compatible = "zmk,keymap";
 
 		mediafn_layer {
 
 			bindings = <
-			&none &none &none &none &none &none				                    &none &kp F7 &kp F8 &kp F9 &kp F12 &none 
-			&kp F5 &kp F6 &kp C_VOL_DN &none &kp C_VOL_UP &none 				    &none &kp F4 &kp F5 &kp F6 &kp F11 &none 
-			&none &none &none &none &kp C_MUTE &none &none &none                    &none &none &none &kp F1 &kp F2 &kp F3 &kp F10 &none 
-					&none &none &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp LALT &kp LSHFT &kp LCTRL &none &none 
+			&none &none &none &none &none &none				                    &none &kp F7 &kp F8 &kp F9 &kp F12 &none
+			&kp F5 &kp F6 &kp C_VOL_DN &none &kp C_VOL_UP &none 				    &none &kp F4 &kp F5 &kp F6 &kp F11 &none
+			&none &none &none &none &kp C_MUTE &none &none &none                    &none &none &none &kp F1 &kp F2 &kp F3 &kp F10 &none
+					&none &none &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp LALT &kp LSHFT &kp LCTRL &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 	};
-	
+
 		keymap {
 		compatible = "zmk,keymap";
 
 		lang_layer {
 
 			bindings = <
-			&none &none &none &none &none &none				                    &none &none &none  &none &none &none 
-			&none &none &none &kp LALT &kp LC(SPACE) &none 				    &none &none &none &none &none &none 
-			&none &none &none &kp LC(KP_MINUS) &kp LC(KP_PLUS) &none &none &none            &none &none &none &none &none &none &none &none 
-					&none &none &none &kp LSHIFT &kp LC(LA(Q))  &none &none &none &none &none 
+			&none &none &none &none &none &none				                    &none &none &none  &none &none &none
+			&none &none &none &kp LALT &kp LC(SPACE) &none 				    &none &none &none &none &none &none
+			&none &none &none &kp LC(KP_MINUS) &kp LC(KP_PLUS) &none &none &none            &none &none &none &none &none &none &none &none
+					&none &none &none &kp LSHIFT &kp LC(LA(Q))  &none &none &none &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 	};
 
-	
+
 };
